@@ -1,0 +1,14 @@
+# Update the system
+sudo apt update && sudo apt upgrade -y
+
+# Install Xorg (the X server)
+sudo apt install xorg -y
+
+# Install BSPWM and essential utilities
+sudo apt install bspwm sxhkd rofi feh compton xbacklight pulseaudio pavucontrol network-manager thunar -y
+
+# Set up user directories (Documents, Downloads, Pictures, etc.)
+xdg-user-dirs-update
+
+# Create directories manually in case `xdg-user-dirs-update` fails
+mkdir -p ~/Documents ~/Downloads ~/Pictures ~/Videos ~/Music ~/Public
